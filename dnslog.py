@@ -4,7 +4,7 @@
 # Filename: dnslog.py
 # Description: dummy DNS server for outbound
 # Usage: python dnslog.py
-# Date Sat Jul 25 02:46:40 EDT 2020
+# Date: Mon Jul 27 02:48:02 EDT 2020
 #
 
 import sys
@@ -31,6 +31,8 @@ while True:
     print('\nwaiting to receive message')
     sys.stdout.flush()
     data, address = sock.recvfrom(4096)
+    if len(data) < 13:
+        continue
 
     print('date: ' + datetime.now().strftime("%Y/%m/%d %H:%M:%S"))
     print('received %s bytes from %s' % (len(data), address))
