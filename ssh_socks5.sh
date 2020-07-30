@@ -1,12 +1,12 @@
 #!/bin/bash
 
-##
+#
 #  Description: socks5 local server by ssh
 # 
 #  Note: for the safety you can use public key authentication by adding your 
 #   rsa pub key to .ssh/authorized_keys, then adding directives to the pub key 
 #   like this 'restrict,port-forwarding,command="/bin/false" ssh-rsa AAAAB3NzaC1...'
-##
+#
 
 
 REMOTE_USER=<user>
