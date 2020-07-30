@@ -8,7 +8,6 @@
 #   like this 'restrict,port-forwarding,command="/bin/false" ssh-rsa AAAAB3NzaC1...'
 #
 
-
 REMOTE_USER=<user>
 REMOTE_HOST=<host>
 REMOTE_PORT=<port>
