@@ -20,10 +20,7 @@ sock.bind(server_address)
 def parsedns(req_bytes):
     def _parsedns(req_bytes):
         count = int(unpack('B',req_bytes[0])[0])
-        if count == 0:
-            return ""
-        return req_bytes[1:count + 1] + "." + _parsedns(req_bytes[count+1:])
-
+        return "" if count == 0 else req_bytes[1:count + 1] + "." + _parsedns(req_bytes[count+1:])
     try:
         return _parsedns(req_bytes[12:])[:-1]
     except Exception:
